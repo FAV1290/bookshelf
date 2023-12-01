@@ -1,0 +1,32 @@
+.outline_td {
+    box-shadow: 5px 3px 3px black;
+}
+
+.middle_td {
+    font-size: 16px;
+    padding: 5px 5px;
+    font-weight: bold;
+    color: black;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    vertical-align: center;
+}
+
+.middle_td span{
+        font-size: 14px;
+        font-weight: normal; 
+}
+
+.id_td {
+    text-align: center;
+    color:aliceblue;
+}
+
+.more_td {
+    text-align: center;
+    font-size: 16px;
+    & a {
+        color: aliceblue;
+        display: block;
+    }
+}
