@@ -1,0 +1,19 @@
+tr {
+    background-image: url('book-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+td {
+    padding: 40px 40px;
+}
+
+.left_td {
+    padding-left: 15%;
+}
+
+.book {
+    font-size: 14px;
+    color: black;
+}

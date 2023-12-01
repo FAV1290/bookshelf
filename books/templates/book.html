@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>Books - {{ book.title }}</title>
+    <link rel='stylesheet' href='{% static "/book.css" %}'>
+{% endblock %}
+{% block content %}
+<div class='book'>
+    <table border='0' align='center' width='55%'>
+        <tr>
+            <td width='50%' class='left_td'>
+                <p><b>ID:</b> {{ book.id }}</p>
+                <p><b>Title:</b> {{ book.title }}</p>
+                <p><b>Author:</b> {{ book.author_full_name }}</p>
+                <p><b>Year of publishing:</b> {{ book.year_of_publishing }}</p>
+                <p><b>Copies printed:</b> {{ book.copies_printed }}</p>
+                <br>
+                <br>
+                <a href='{% url "books" %}'>Back to books list...</a>
+            </td>
+            <td>
+                <b>Description:</b> {{ book.short_description }}
+            </td>
+        </tr>
+    </table>
+</div>
+ {% endblock %}

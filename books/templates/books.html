@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>Books</title>
+    <link rel='stylesheet' href='{% static "/books.css" %}'>
+{% endblock %}
+{% block content %}
+    <table border='0' align='center'>
+        <tr>
+            {% for book in books %}
+                <td width='96px' background='{% static book.background_filepath %}' class='outline_td'>
+                    <table width='96px' border='0'>
+                        <tr>
+                            <td height='85px' class='id_td'><b>{{ book.id }}</b></td>
+                        </tr>
+                        <tr>
+                            <td height='325px' class='middle_td'>
+                                {{ book.title_preview }}<br>
+                                <span>{{ book.author_preview}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height='230px' class='more_td'><a href='./{{ book.id }}'><b>more...</b></a></td>
+                        </tr>
+                    </table>
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+ {% endblock %}
